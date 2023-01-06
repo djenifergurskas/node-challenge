@@ -29,6 +29,10 @@ app.put("/update", (req, res) => {
   res.json(customers)
 });
 
+app.patch("/patch", (req, res) => {
+  res.json(customers)
+});
+
 app.delete("/delete", (req, res) => {
   res.json(customers)
 });
