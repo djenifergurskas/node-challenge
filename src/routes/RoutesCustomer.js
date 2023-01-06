@@ -15,6 +15,10 @@ router.put("/", (req, res) => {
   res.json(customers);
 });
 
+router.patch("/", (req, res) => {
+  res.json(customers);
+});
+
 router.delete("/", (req, res) => {
   res.json(customers);
 });
