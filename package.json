@@ -18,5 +18,14 @@
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "eslint": "^8.31.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djenifergurskas/node-challenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/djenifergurskas/node-challenge/issues"
+  },
+  "homepage": "https://github.com/djenifergurskas/node-challenge#readme",
+  "description": ""
 }
