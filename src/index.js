@@ -25,18 +25,6 @@ app.post("/create_user", customerValidator, (req, res,) => {
         
 })
 
-app.put("/update", (req, res) => {
-  res.json(customers)
-});
-
-app.patch("/patch", (req, res) => {
-  res.json(customers)
-});
-
-app.delete("/delete", (req, res) => {
-  res.json(customers)
-});
-
 app.listen(3000, () => {
   console.log("Server is running on port 3000")
 });

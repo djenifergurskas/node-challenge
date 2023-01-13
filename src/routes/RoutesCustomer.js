@@ -11,16 +11,4 @@ router.post("/", (req, res) => {
   res.json(customers);
 });
 
-router.put("/", (req, res) => {
-  res.json(customers);
-});
-
-router.patch("/", (req, res) => {
-  res.json(customers);
-});
-
-router.delete("/", (req, res) => {
-  res.json(customers);
-});
-
 export default router
