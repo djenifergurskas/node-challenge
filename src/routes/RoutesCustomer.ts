@@ -1,1 +1,7 @@
-import { User } from "../domain/user/services/CustomerValidator";
+import { Router } from 'express';
+
+const routes = Router();
+
+routes.get('/', );
+
+export default routes;

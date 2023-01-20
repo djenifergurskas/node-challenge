@@ -8,16 +8,19 @@
   "author": "Junior Alves <junior.alves@warren.com.br>",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^18.11.18",
     "express": "^4.18.2",
     "express-validator": "^6.14.2",
     "nodemon": "^2.0.15",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.1",
     "typescript": "^4.9.4"
   },
   "type": "module",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.48.1",
-    "@typescript-eslint/parser": "^5.48.1",
-    "eslint": "^8.31.0"
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0"
   },
   "repository": {
     "type": "git",
