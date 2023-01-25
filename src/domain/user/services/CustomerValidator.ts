@@ -32,6 +32,7 @@ const person = {
   number: 137,
 };
 
+type UserInput = z.input<typeof createPerson>;
 type UserOutput = z.infer<typeof createPerson>;
 
 const {
@@ -50,4 +51,8 @@ const {
   number,
 } = createPerson.parse(person);
 
-function createPersonInDatabase(person: UserOutput) {}
+function createPersonInDataBase(person: UserInput) {}
+
+function createPersonOutDataBase(person: UserOutput) {}
+
+export default createPerson;

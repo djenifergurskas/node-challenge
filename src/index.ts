@@ -1,10 +1,16 @@
-import express from "express";
-import { Request, Response } from "express";
+import users from "./mocks/CustomerMock";
+import fastify from "fastify";
 
-const app = express();
+const app = fastify();
 
-app.get("/users", (req: Request, res: Response) => {
-  res.send("Ok!");
+app.get("/users", (request, reply) => users);
+
+app.post("/users", (request, reply) => users);
+
+app.listen({ port: 3000 }, (err, address) => {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  }
+  console.log(`Server listening at ${address}`);
 });
-
-app.listen(3000, () => console.log("Listenning on port 3000!"));
