@@ -1,11 +1,23 @@
-import users from "./mocks/CustomerMock.js";
 import fastify from "fastify";
-
-var app = fastify();
-app.get("/users", function (request, reply) {
+import { z } from "zod";
+import createPerson from "./domain/user/services/CustomerValidator.js";
+import users from "./mocks/CustomerMock.js";
+var routes = fastify();
+routes.get("/users", function () {
   return users;
 });
-app.listen({ port: 3000 }, function (err, address) {
+routes.post("/users", function (request, reply) {
+  try {
+    var user = createPerson.parse(request.body);
+    users.push(user);
+    return user;
+  } catch (error) {
+    var errorJson = JSON.stringify(error);
+    if (error instanceof z.ZodError) return reply.status(400).send(errorJson);
+    else return reply.status(500).send(errorJson);
+  }
+});
+routes.listen({ port: 3000 }, function (err, address) {
   if (err) {
     console.error(err);
     process.exit(1);

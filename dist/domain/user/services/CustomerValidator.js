@@ -14,20 +14,4 @@ var createPerson = z.object({
     postal_code: z.string(),
     number: z.number(),
 });
-var person = {
-    full_name: "Djênifer",
-    email: "gurskasdjenifer@gmail.com",
-    email_confirmation: "gurskasdjenifer@gmail.com",
-    cpf: "60058021105",
-    cellphone: "5134921300",
-    birthdate: true,
-    email_sms: true,
-    whatsapp: true,
-    country: "Brasil",
-    city: "Porto Alegre",
-    postal_code: "94445420",
-    address: "Rua das Flores",
-    number: 137,
-};
-var _a = createPerson.parse(person), full_name = _a.full_name, email = _a.email, email_confirmation = _a.email_confirmation, cpf = _a.cpf, cellphone = _a.cellphone, birthdate = _a.birthdate, email_sms = _a.email_sms, whatsapp = _a.whatsapp, country = _a.country, city = _a.city, postal_code = _a.postal_code, address = _a.address, number = _a.number;
 export default createPerson;

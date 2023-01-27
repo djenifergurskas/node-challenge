@@ -1,3 +1,2 @@
-const users = [];
-
+var users = [];
 export default users;

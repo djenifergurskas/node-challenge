@@ -16,43 +16,4 @@ const createPerson = z.object({
   number: z.number(),
 });
 
-const person = {
-  full_name: "Djênifer",
-  email: "gurskasdjenifer@gmail.com",
-  email_confirmation: "gurskasdjenifer@gmail.com",
-  cpf: "60058021105",
-  cellphone: "5134921300",
-  birthdate: true,
-  email_sms: true,
-  whatsapp: true,
-  country: "Brasil",
-  city: "Porto Alegre",
-  postal_code: "94445420",
-  address: "Rua das Flores",
-  number: 137,
-};
-
-type UserInput = z.input<typeof createPerson>;
-type UserOutput = z.infer<typeof createPerson>;
-
-const {
-  full_name,
-  email,
-  email_confirmation,
-  cpf,
-  cellphone,
-  birthdate,
-  email_sms,
-  whatsapp,
-  country,
-  city,
-  postal_code,
-  address,
-  number,
-} = createPerson.parse(person);
-
-function createPersonInDataBase(person: UserInput) {}
-
-function createPersonOutDataBase(person: UserOutput) {}
-
 export default createPerson;
