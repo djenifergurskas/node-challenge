@@ -1,4 +1,4 @@
-import { IUsersRepository } from "../repositories/IUserRepository";
+import { promise } from "zod";
 import { User } from "../validation/UserValidator";
 
 /*export class UserRepo implements IUsersRepository {
@@ -13,3 +13,9 @@ import { User } from "../validation/UserValidator";
     this.users.push(user);
   }
 }*/
+interface BaseRepository<User> {
+  find(): User;
+  create(data: object): User;
+}
+
+export default BaseRepository;
