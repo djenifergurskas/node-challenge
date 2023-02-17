@@ -1,5 +1,5 @@
 import { IUsersRepository } from "../repositories/IUserRepository";
-import { User } from "../validation/UserValidator";
+import { User } from "./User";
 import { IUserRequestDTO } from "./CreateUserRequest";
 
 export class CreateUser {

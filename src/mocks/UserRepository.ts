@@ -1,7 +1,4 @@
-import BaseRepository from "./BaseRepos";
-
-class UserRepository implements BaseRepository<object> {
-  public find() {}
-
-  public create() {}
+import { User } from "../interfaces/User";
+export interface IBaseRepo {
+  create(user: User): void;
 }

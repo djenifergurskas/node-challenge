@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { CreateUser } from "./CreateUser";
 
 export class CreateController {
+  static handle: any;
   constructor(private createUser: CreateUser) {}
 
   async handle(request: Request, response: Response): Promise<Response> {

@@ -1,9 +1,16 @@
-import { response, Router } from "express";
+import { Request, Response, Router } from "express";
+import { validation } from "./controller/ValidationHandle";
+import { CreateController } from "./interfaces/UserController";
 
-const routes = Router();
+import { ListUser } from "./List/ListUser";
+import { userValidation } from "./validation/ValidationBody";
 
-routes.post("/users", (request, response) => {
-  return response.status(201).send();
-});
-
-export { routes };
+export const router = Router();
+router.get("/customize", ListUser.list);
+router.post(
+  "/create-user",
+  validation(userValidation),
+  (req: Request, res: Response) => {
+    return CreateController.handle(req, res);
+  }
+);

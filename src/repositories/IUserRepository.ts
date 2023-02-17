@@ -1,4 +1,4 @@
-import { User } from "../validation/UserValidator";
+import { User } from "../interfaces/User";
 
 export interface IUsersRepository {
   findByEmail(email: string): Promise<User>;
