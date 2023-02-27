@@ -1,3 +1,5 @@
+import "reflect-metadata";
+import "shared/index";
 import express from "express";
 import { router } from "./routes";
 

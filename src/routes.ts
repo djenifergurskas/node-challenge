@@ -1,16 +1,16 @@
 import { Request, Response, Router } from "express";
-import { validation } from "./controller/ValidationHandle";
-import { CreateController } from "./interfaces/UserController";
+import { listUserUseCase } from "List/ListCase";
 
-import { ListUser } from "./List/ListUser";
+import { validation } from "./controller/ValidationHandle";
 import { userValidation } from "./validation/ValidationBody";
+import { createUserController } from "@controller/CreateUserIndex";
 
 export const router = Router();
-router.get("/customize", ListUser.list);
+router.get("/customize", listUserUseCase.list);
 router.post(
   "/create-user",
   validation(userValidation),
   (req: Request, res: Response) => {
-    return CreateController.handle(req, res);
+    return createUserController.handle(req, res);
   }
 );
