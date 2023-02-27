@@ -1,4 +1,4 @@
-import { ListUser } from "./ListUser";
+import { ListUser } from "../List/ListUser";
 
 const listUserUseCase = new ListUser();
 

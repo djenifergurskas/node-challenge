@@ -1,5 +1,5 @@
 import { Request, Response, Router } from "express";
-import { listUserUseCase } from "list/ListCase";
+import { listUserUseCase } from "List/ListCase";
 
 import { validation } from "./controller/ValidationHandle";
 import { userValidation } from "./validation/ValidationBody";
