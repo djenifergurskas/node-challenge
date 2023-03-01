@@ -8,6 +8,6 @@ const app = express();
 app.use(express.json());
 app.use(router);
 
-app.listen(5000);
+app.listen(3000);
 
 export { app };
