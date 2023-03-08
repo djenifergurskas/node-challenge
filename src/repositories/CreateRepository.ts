@@ -1,4 +1,4 @@
-import { User } from "../interfaces/User";
+import { User } from "../User/User";
 import { users } from "../mocks/BankRepo";
 import { ICreateUserRepo } from "./ICreateRepository";
 

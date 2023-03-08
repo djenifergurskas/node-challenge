@@ -17,7 +17,7 @@ export class CreateUserControl {
       this.createUser.create(user);
       return res.status(201).send("User created");
     } catch (err) {
-      return res.status(500).send(`${err}`);
+      return res;
     }
   }
 }

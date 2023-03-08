@@ -1,0 +1,15 @@
+export const userMocked = {
+  full_name: "Djênifer Gurskas",
+  email: "gurskasdjenifer@gmail.com",
+  email_confirmation: "gurskasdjenifer@gmail.com",
+  cpf: "60050021055",
+  cellphone: "51996898001",
+  birthdate: "09-01-2000",
+  email_sms: true,
+  whatsapp: true,
+  country: "Brasil",
+  city: "Porto Alegre",
+  postal_code: "9445300",
+  address: "Rua das Flores",
+  number: "007",
+};
